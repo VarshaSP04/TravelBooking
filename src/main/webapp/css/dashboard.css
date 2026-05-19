@@ -1,0 +1,8 @@
+/* Dashboard */
+.dash-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-lg); margin-bottom: var(--space-2xl); }
+.dash-welcome { margin-bottom: var(--space-2xl); }
+.dash-welcome h2 { margin-bottom: var(--space-sm); }
+.dash-welcome p { color: var(--text-secondary); }
+
+@media (max-width: 1024px) { .dash-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .dash-grid { grid-template-columns: 1fr; } }

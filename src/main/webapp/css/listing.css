@@ -1,0 +1,57 @@
+/* Listing pages (hotels, trips, search) */
+.listing-filters {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    transition: all var(--duration) var(--ease);
+    cursor: pointer;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: var(--space-xl);
+    align-items: stretch;
+    max-height: none !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+.listing-grid > .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.listing-grid > .card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.listing-grid > .card .card-meta {
+    margin-top: auto;
+}
+
+.listing-count {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-lg);
+}

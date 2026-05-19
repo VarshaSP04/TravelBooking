@@ -1,0 +1,132 @@
+/* Detail pages (hotel-detail, trip-detail) */
+.detail-hero {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+}
+
+.detail-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-2xl);
+}
+
+.detail-hero-overlay h1 { color: white; font-size: var(--fs-3xl); }
+.detail-hero-overlay .location { color: rgba(255,255,255,0.8); font-size: var(--fs-md); margin-top: var(--space-sm); }
+
+.detail-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-2xl);
+    padding: var(--space-2xl) 0;
+}
+
+.detail-main {}
+
+.detail-sidebar {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+}
+
+.detail-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.detail-section h3 {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.detail-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: var(--fs-base);
+}
+
+/* Itinerary */
+.itinerary-list {}
+
+.itinerary-item {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.itinerary-day {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--fs-xs);
+}
+
+.itinerary-day span { font-size: var(--fs-xl); }
+
+.itinerary-info h4 { margin-bottom: var(--space-xs); }
+.itinerary-info p { color: var(--text-secondary); font-size: var(--fs-sm); }
+
+/* Pricing sidebar card */
+.price-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+}
+
+.price-card .price-amount {
+    font-size: var(--fs-3xl);
+    font-weight: 800;
+    font-family: var(--font-display);
+    color: var(--primary);
+}
+
+.price-card .price-label {
+    color: var(--text-light);
+    font-size: var(--fs-sm);
+}
+
+.price-card .price-details {
+    margin: var(--space-lg) 0;
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.price-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+    font-size: var(--fs-sm);
+}
+
+.price-detail-row .label { color: var(--text-secondary); }
+.price-detail-row .value { font-weight: 600; }
+
+@media (max-width: 768px) {
+    .detail-content { grid-template-columns: 1fr; }
+    .detail-hero { height: 300px; }
+    .detail-sidebar { position: static; }
+}

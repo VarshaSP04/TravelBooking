@@ -1,0 +1,35 @@
+/* Booking pages */
+.booking-form-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-md);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.booking-summary {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    border: 1px solid var(--border-light);
+}
+
+.booking-summary h3 { margin-bottom: var(--space-md); }
+
+.booking-summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+    font-size: var(--fs-sm);
+}
+
+.booking-total {
+    font-size: var(--fs-xl);
+    font-weight: 800;
+    color: var(--primary);
+    padding-top: var(--space-md);
+    border-top: 2px solid var(--border);
+    margin-top: var(--space-md);
+}

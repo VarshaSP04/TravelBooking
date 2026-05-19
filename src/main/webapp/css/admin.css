@@ -1,0 +1,188 @@
+/* ===== ADMIN PANEL ===== */
+.admin-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    background: var(--bg-dark);
+    padding: var(--space-xl) 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.admin-sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 0 var(--space-lg);
+    margin-bottom: var(--space-2xl);
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: white;
+}
+
+.admin-nav-section {
+    margin-bottom: var(--space-lg);
+}
+
+.admin-nav-label {
+    padding: 0 var(--space-lg);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: var(--space-sm);
+}
+
+.admin-nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    color: rgba(255,255,255,0.6);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    transition: all var(--duration) var(--ease);
+    border-left: 3px solid transparent;
+}
+
+.admin-nav-link:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.admin-nav-link.active {
+    color: white;
+    background: rgba(15, 111, 236, 0.15);
+    border-left-color: var(--primary);
+}
+
+.admin-nav-icon {
+    width: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Main content */
+.admin-main {
+    padding: var(--space-xl) var(--space-2xl);
+    background: var(--bg);
+    overflow-y: auto;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+.admin-header h1 {
+    font-size: var(--fs-2xl);
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+/* Admin form */
+.admin-form-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-sm);
+    max-width: 800px;
+}
+
+.admin-form-card h2 {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* Dynamic rows (room types, itinerary) */
+.dynamic-rows {
+    margin-bottom: var(--space-md);
+}
+
+.dynamic-row {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+    margin-bottom: var(--space-sm);
+}
+
+.dynamic-row input {
+    flex: 1;
+}
+
+.btn-add-row {
+    font-size: var(--fs-sm);
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: var(--space-sm);
+}
+
+.btn-remove-row {
+    padding: 8px;
+    color: var(--danger);
+    cursor: pointer;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+}
+
+/* Admin login */
+.admin-login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-dark);
+}
+
+.admin-login-card {
+    background: var(--bg-dark-card);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    width: 100%;
+    max-width: 420px;
+}
+
+.admin-login-card h2 { color: white; text-align: center; margin-bottom: var(--space-xl); }
+.admin-login-card .form-label { color: rgba(255,255,255,0.7); }
+.admin-login-card .form-control {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+    color: white;
+}
+.admin-login-card .form-control:focus {
+    border-color: var(--primary);
+    background: rgba(255,255,255,0.08);
+}
+
+@media (max-width: 768px) {
+    .admin-layout { grid-template-columns: 1fr; }
+    .admin-sidebar {
+        position: fixed;
+        left: -260px;
+        z-index: var(--z-nav);
+        transition: left var(--duration-slow) var(--ease);
+        width: 260px;
+    }
+    .admin-sidebar.open { left: 0; }
+    .admin-stats { grid-template-columns: repeat(2, 1fr); }
+}
