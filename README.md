@@ -111,7 +111,7 @@ Ensure you have the following installed on your machine:
 
 ### 1. Configure MongoDB Connection
 
-Edit the configuration file at `src/main/resources/config.properties`:
+Edit the configuration file at `TravelBooking/src/main/resources/config.properties`:
 
 ```properties
 # Option A: MongoDB Atlas Cloud (recommended)
@@ -185,6 +185,7 @@ The application will be deployed as the root application:
 
 1. Package the WAR file:
    ```bash
+   cd TravelBooking
    mvn clean package
    ```
 2. Copy `target/TravelBooking.war` into your Tomcat 10.1 `webapps/` directory.

@@ -1,9 +1,2 @@
-target/
-*.class
-*.war
-*.jar
-.idea/
-*.iml
-.settings/
-.classpath
-.project
+# Added by code-review-graph
+.code-review-graph/
